@@ -15,6 +15,7 @@ import_url = 'https://raw.githubusercontent.com/Nicocolasticot/dataviz/main/impo
 response1 = requests.get(export_url)
 response2 = requests.get(import_url)
 response1.raise_for_status()  # Raises an HTTPError if the HTTP request returned an unsuccessful status code
+print(response1.raise_for_status())
 
 # Use BytesIO to open the response content and read it into pandas
 with io.BytesIO(response1.content) as file:
