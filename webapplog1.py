@@ -7,8 +7,8 @@ import numpy as np
 st.set_page_config(layout='wide')
 
 # Reading data from Excel files in your repository
-export_sum_df = pd.read_excel('../dataviz/export_sum.xlsx')
-import_sum_df = pd.read_excel('../dataviz/import_sum.xlsx')
+export_sum_df = pd.read_excel('/Users/nicolasreboullet/Dropbox/Mac/Desktop/DATA VIZ/Ass 1/sum_data_product_sector/export_sum.xlsx')
+import_sum_df = pd.read_excel('/Users/nicolasreboullet/Dropbox/Mac/Desktop/DATA VIZ/Ass 1/sum_data_product_sector/import_sum.xlsx')
 
 
 # For demonstration, let's assume you want to visualize the 'export_sum.xlsx' data similarly
