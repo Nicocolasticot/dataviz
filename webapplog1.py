@@ -15,7 +15,6 @@ import_url = 'https://raw.githubusercontent.com/Nicocolasticot/dataviz/main/impo
 response1 = requests.get(export_url)
 response2 = requests.get(import_url)
 response1.raise_for_status()  # Raises an HTTPError if the HTTP request returned an unsuccessful status code
-print(response1.raise_for_status())
 
 # Use BytesIO to open the response content and read it into pandas
 with io.BytesIO(response1.content) as file:
@@ -28,13 +27,6 @@ with io.BytesIO(response2.content) as file:
 # Set Streamlit page configuration
 st.set_page_config(layout='wide')
 
-# Reading data from Excel files in your repository
-#export_sum_df = pd.read_excel('export_sum.xlsx')
-#import_sum_df = pd.read_excel('import_sum.xlsx')
-
-print(export_sum_df.head())
-
-# For demonstration, let's assume you want to visualize the 'export_sum.xlsx' data similarly
 # Update the column names according to your actual Excel file structure
 # Melt the DataFrame to long format
 # Filter the DataFrame for specific countries
